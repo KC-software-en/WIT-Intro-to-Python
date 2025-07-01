@@ -1,3 +1,7 @@
+# A right of passage - running your first Python program
+# in the command prompt, type `python session_1_task.py` and view the output int the terminal
+print("Hello, world")
+
 """
 Build a simple contact book or shopping list using lists and dictionaries.
 

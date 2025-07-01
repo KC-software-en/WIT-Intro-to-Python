@@ -17,33 +17,35 @@ You might be wondering to what does object-oriented programming (OOP) refer. Pyt
 In Python you can create a class which acts as a general blueprint and name it, for example, cat. Then make objects from it, for example, Snowbell and Merv. This helps keep your code neat and easy to reuse, especially as your programs grow. Now don't worry if this sounds a bit like gibberish. OOP is a topic that is explored after you have advanced your knowledge as a beginner.
 
 ## Psuedocode
-Psuedocode is an informal method of stating what you want code to do. Here you visual the task and the steps to complete it. Essentially this is the plan for an algorithm carried out by a computer. That is to say algorithms are the steps. Now bear in mind that this is simply planning and not the actual coding language. Psuedocode guides the comments you will document to explain the actual Python code.
+Psuedocode is an informal method of stating what you want code to do. Here you visual the task and the steps to complete it. Essentially this is the plan for an algorithm carried out by a computer. That is to say algorithms are the steps. Ensure that the algorithm has an input, output and very clear steps. Now bear in mind that this is simply planning and not the actual coding language. Psuedocode guides the comments you will document to explain the actual Python code.
 
 E.g.
 
 *Problem: write a program that prints "even" or "odd" depending on whether the number input is divisable by two without a remainder.*
 
-Psuedocode solution (with particular format):
++ Psuedocode solution (with no particular format):
 
-request a number from the user
-
-check that the input was a number
-
-if the input was not a number
+    request an integer input from the user
     
-    request new input
+    store the input in a variable named, "number"
 
-else
-    
-    divide the input by 2
+    check that the input was an integer
 
-if the result is zero
-    
-    print even
+    if the "number" was not an integer
 
-else
-    
-    print odd
+        request new input
+
+    else
+
+        divide the "number" by 2
+
+    if the result is zero
+
+        print out even
+
+    else
+
+        print out odd
 
 ## Comments 
 

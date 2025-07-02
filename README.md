@@ -25,6 +25,7 @@ E.g.
 
 + Psuedocode solution (with no particular format):
 
+    ```
     request an integer input from the user
     
     store the input in a variable named, "number"
@@ -46,6 +47,7 @@ E.g.
     else
 
         print out odd
+    ```
 
 ## Comments 
 

@@ -49,3 +49,23 @@ E.g.
 
 ## Comments 
 
+A comment is an explanation of Python code and it can be placed anywhere in a Python program. The comment is always ignored by the computer while running the code and is solely meant for the human reading the file. Write a comment in a Python program by adding a '#' at the start of the line. 
+
+E.g. 
+
+`# This is a comment`
+
+There are two types of comments depending on the their placement.
+If you want the comment to precede your code, refer to it as a block comment. A comment can also be placed on the same line as the code, after it, as an inline comment.
+
+E.g.
+
+`# This is a block comment`
+
+`print("Hello,world")`
+
+E.g.
+
+`print("Hello,world") # This is an inline comment`
+
+

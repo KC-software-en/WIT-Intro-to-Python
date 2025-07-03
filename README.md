@@ -71,3 +71,9 @@ E.g.
 `print("Hello,world") # This is an inline comment`
 
 
+## Variables
+A Python variable can be described as the location where data was stored. A variable is the name of the data that will be used to refer to the data during an algorithm.
+
+E.g.
+`cat = "Snowball"`
+Cat is the variable name storing the data of the cat's name.

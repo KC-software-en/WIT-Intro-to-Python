@@ -38,15 +38,21 @@ E.g.
 
     else
 
-        divide the "number" by 2
+        store the result as "quotient"
 
-    if the result is zero
+        divide the "number" by 2 to calculate the "quotient"
 
-        print out even
+    if the "quotient" is zero
+
+        store the "interpretation" as even
+
+        print out "interpretation"
 
     else
 
-        print out odd
+        store the "interpretation" as odd
+
+        print out "interpretation"
     ```
 
 ## Comments 
@@ -76,4 +82,49 @@ A Python variable can be described as the location where data was stored. A vari
 
 E.g.
 `cat = "Snowball"`
+
 Cat is the variable name storing the data of the cat's name.
+
+Variables are useful in keeping track of different information.
+
+Another important part of an algorithm is the input and output. A user sends input to the computer via a mouse, keyboard or touchpad. Output is the information a computer displays to the user after being transferred from it via a screen, printer or audio device.
+
+Lets look at the previous algorithm to identify the input and output.
+
+E.g.
+
+*Problem: write a program that prints "even" or "odd" depending on whether the number input is divisable by two without a remainder.*
+
++ Psuedocode solution (with no particular format):
+
+    ```
+    request an integer input from the user
+    
+    store the input in a variable named, "number"
+
+    check that the input was an integer
+
+    if the "number" was not an integer
+
+        request new input
+
+    else
+
+        store the result as "quotient"
+
+        divide the "number" by 2 to calculate the "quotient"
+
+    if the "quotient" is zero
+
+        store the "interpretation" as even
+
+        print out "interpretation"
+
+    else
+
+        store the "interpretation" as odd
+
+        print out "interpretation"
+    ```
+
+From the above example, input is the "number" and output is "interpretation."

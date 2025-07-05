@@ -4,5 +4,3 @@
 # In the terminal, type: `python "first_program.py"` or click the play button in the top right corner
 
 # print("Hello, World!")
-
-

@@ -249,7 +249,13 @@ E.g.
 
 Notice the variable name "breed", the input function and the argument placed within the brackets. An argument is the value that the print command will use to act.
 
-The "" in the brackets indicate that the data a user inputs will store as a string data type (i.e. a list of characters) but more on data types later.
+The information a user inputs automatically stores as a string data type (i.e. a list of characters). Moreover, you can also cast the string variable type that was entered via input(), so that you can use it later in the program's code. See the examples below:
+
+E.g.
+
+`num_of_pets = int(input("How many pets do you have?: "))`
+
+`vac_cost = float(input("How much does it cost to vaccinate your cat?: "))`
 
 + _**Note that the program pauses until after the user enters information and presses Enter**_
 
@@ -262,6 +268,38 @@ E.g.
 E.g. 
 
 `print("Hello, World!")` # will output the sentence in the argument.
+
+### Print out variables within a string
+
+You can use a formatted string or 'f-string' to print out a string containing the values of variables that has been saved.
+It is important that the print argument:
+1. Starts with the shortened 'f' indicating format, 
+1. Opens and closes the inverted commas, and 
+1. Has '{}' containing the variable name.
+
+E.g.
+
+print(f"The cost to vaccinate the cat was R{vac_cost}")
+
+### Overwrite variables
+
+If you decide to change the value previously stored in a variable, during an algorithm as your program runs, it is fairly easy. Simply use the '=' to assign a new value.
+
+E.g.
+
+```
+breed = "tabbie"
+print(breed)
+output:
+tabbie
+
+breed = "ragdoll"
+print(breed)
+output:
+ragdoll
+```
+
+Python will always use the lastest value saved in a variable - bear in mind that the code runs line by line from top to bottom.
 
 ### **_An important note on syntax_**
 

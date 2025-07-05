@@ -1,5 +1,4 @@
-"""
-Build a simple contact book or shopping list using lists and dictionaries.
+"""Build a simple contact book or shopping list using lists and dictionaries.
 
 1. Write out the pseudocode for your chosen task in a docstring.
 2. Document the description of the code with comments
@@ -8,4 +7,6 @@ Build a simple contact book or shopping list using lists and dictionaries.
 5. Use a list or dictionary to store your data.
 """
 
-"""This is a docstring. Like comments, when Python runs your code it will not pick up a docstring as code."""
+"""This is a docstring. Like comments, when Python runs your code it will not pick up a docstring as code.
+Read more: https://peps.python.org/pep-0008/#documentation-strings
+"""

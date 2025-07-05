@@ -83,16 +83,103 @@ E.g.
 + **Go to session_1_task.py and complete the comments for your selected task**
 
 ## Variables
-A Python variable can be described as the location where data was stored. A variable is the name of the data that will be used to refer to the data during an algorithm.
+A Python variable can be described as the location where data was stored. A variable is the name of the data that will be used to refer to the data during an algorithm. Ensure the following when naming a variable:
+
+1. Use only lowercase letters.
+
+1. Use snake case for longer variable names, e.g. number_of_pets, acccording to the Python Enhancement Proposals (PEP) 8 style guide. Thus, replace spaces with undercores.
+
+1. Use a descriptive name relevant to the program algorithm created and to the value it refers.
+
+1. A variable name may consist of letters, numbers, and underscores. However, it may only begin with either a letter or underscore.
+
+1. A Python keyword cannot be used as variable name, e.g. print = "Sam". It was predefined and cannot be redefined by a coder. Python will pick it up as the function to which it may refer.
 
 E.g.
+
 `cat = "Snowball"`
 
-Cat is the variable name storing the data of the cat's name.
+Variables are useful in keeping track of different information. _From the example above, cat is the variable name which stores the cat name "Snowball" as data._ 
 
-Variables are useful in keeping track of different information.
+There are various **data types** from which you can consider using as you assign data to a variable. These can comprise:
+1. Char
+1. String
+1. Integer
+1. Float
+1. Boolean
 
-Another important part of an algorithm is the input and output. A user sends input to the computer via a mouse, keyboard or touchpad. Output is the information a computer displays to the user after being transferred from it via a screen, printer or audio device.
+### Char
+
+A char refers to a single character. This could be a letter, number, punctuation or special character. For example, A, 2, !, #.
+You could use a char to store the grade for a student, for example, `grade = "B"; people = 3`.
+
+### String
+
+A string is a list of characters. For example, use it to store a name as `cat = "Snowball"`. Python detects a string with the presence of inverted commas ("").
+
+### Integer
+
+An integer is a whole number (i.e. no decimal or fraction included). For example, store the number of students at a career fair as `num_of_students = 56`. Python detects an integer by the presence of a whole number.
+
+### Float
+A float is a number that contains a decimal amount, for example, `cost = 14.90`. Python detects a float by the presence of a decimal point.
+
+### Boolean
+A boolean can only store one of two values - either True or False. This means that an outcome only has two possibities. Note the **capitalisation** of a boolean. Python only recognises a boolean with its capitalised value.
+
+**Check the data type of a variable with the built-in type() function**
+
+E.g. 
+
+```
+num_of_students = 56
+print(type(num_of_students)) 
+output:
+<class 'int'>
+```
+
+E.g. 
+
+```
+num_of_students = "56"
+print(type(num_of_students)) 
+output:
+<class 'str'>
+```
+
+_Take note of the above example._ You may find yourself with an error because the data type used through out your algorithm cannot perform certain actions. For example, you cannot perform mathematical operations on a number stored as a string. 
+The solution? Cast your data type. This essentially means converting your data type.
+
+These are the available casting functions:
+1. int()
+1. str()
+1. float()
+
+An argument is the value that the casting commands will use to act. Simply place the variable name as the argument inside the brackets. 
+
+E.g.
+```
+num_of_students = "56"
+int(num_of_students)
+print(type(num_of_students)) 
+output:
+<class 'int'>
+```
+
+The above conversion will allow for addition operations, for example:
+
+```
+invited_guests = 29
+plus_1_guests = "13"
+total_guests = invited_guests + int(plus_1_guests)
+output:
+42
+```
+
+
+### Input and Output
+
+Another important part of an algorithm is the **input and output**. A user sends input to the computer via a mouse, keyboard or touchpad. Output is the information a computer displays to the user after being transferred from it via a screen, printer or audio device.
 
 Lets look at the previous algorithm to identify the input and output.
 
@@ -175,3 +262,7 @@ Some common syntax errors include:
 Python is case-sensitive so be sure to check your uppercase and lowercase letter placements.
 
 If an error occurs and the program fails, follow up with debugging. Debugging is the process to resolve the error. The terminal will name the type of error (e.g. SyntaxError) and the line where the error occurs. This is very helpful to locate and update the code to ensure that the program runs uninterrupted.
+
+
+### Resources
+1. [PEP 8](https://peps.python.org/pep-0008/#introduction) style guide

@@ -3,5 +3,5 @@
 # Run the program
 # In the terminal, type: `python "zen_of_python.py"` or click the play button in the top right corner
 
-# import this
+import this
 

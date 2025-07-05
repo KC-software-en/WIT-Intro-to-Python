@@ -16,8 +16,10 @@ You might be wondering to what does object-oriented programming (OOP) refer. Pyt
 
 In Python you can create a class which acts as a general blueprint and name it, for example, cat. Then make objects from it, for example, Snowbell and Merv. This helps keep your code neat and easy to reuse, especially as your programs grow. Now don't worry if this sounds a bit like gibberish. OOP is a topic that is explored after you have advanced your knowledge as a beginner.
 
+# Building Blocks of Python
+
 ## Psuedocode
-Psuedocode is an informal method of stating what you want code to do. Here you visual the task and the steps to complete it. Essentially this is the plan for an algorithm carried out by a computer. That is to say algorithms are the steps. Ensure that the algorithm has an input, output and very clear steps. Now bear in mind that this is simply planning and not the actual coding language. Psuedocode guides the comments you will document to explain the actual Python code.
+Psuedocode is an informal method of stating what you want the code to do. Here you visual the task and the steps to complete it. Essentially this is the plan for an algorithm carried out by a computer. That is to say algorithms are the steps. Ensure that the algorithm has an input, output and very clear steps. Now bear in mind that this is simply planning and not the actual coding language. Psuedocode guides the comments you will document to explain the actual Python code.
 
 E.g.
 
@@ -56,6 +58,17 @@ E.g.
     ```
 
 **Go to session_1_task.py and complete the psuedocode for your selected task**
+
++ Open your codespace.
++ Install Python if prompted by a pop-up.
++ Open the command prompt terminal (should open automatically).
++ Navigate to the directory containing the first task.
++ Run the following commands to navigate there:
+    + `dir` and Enter to check your directory contains the README.md and Building Blocks of Python.
+    + `cd Buil` followed by the tab button to automatically fill the directory and then press Enter.
+        + if you don't have a keyboard, type the full `cd Building\ Blocks\ of\ Python/` and press Enter.
+    + `dir` again and Enter to check if you can find session_1_task.py in the list of files output.
+    + `code session_1_task.py` to open the file or click on the file name in the left side panel.
 
 ## Comments 
 

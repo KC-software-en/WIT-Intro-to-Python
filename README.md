@@ -314,6 +314,144 @@ Python is case-sensitive so be sure to check your uppercase and lowercase letter
 
 If an error occurs and the program fails, follow up with debugging. Debugging is the process to resolve the error. The terminal will name the type of error (e.g. SyntaxError) and the line where the error occurs. This is very helpful to locate and update the code to ensure that the program runs uninterrupted.
 
+## Data Structures
+
+### Introduction to Data Structures
+
+Data structures are the ways one can organize, store, and manage data efficiently. The choice of data structure depends on the type of data you have and what you plan to do with it. In the python documentation linked below you’ll see that data structures include lists, dictionaries (also known as hash maps), sets, and tuples.
+
+Today we are going to look at two common data stuctures: list and dictionary
+
+### The List
+
+#### When to use a List?
+
+Lists are a great choice when you want an ordered collection of items. Here are a few examples where you may find lists particularly useful:
+
+1.	**Ordered Data**: When the order of elements matters.
+1.	**Index-based Access**: When you need to frequently access elements by their position.
+1.	**Mixed Data Types**: When you need to store elements of different data types.
+1.	**Dynamic Size**: When you need to add or remove items frequently.
+
+Let's see how we can create and manipulate lists.
+
+#### Creating a List
+
+You can create a list by naming an object and entering your values within square brackets `[]`, separated by commas. Now remember, Lists can store different data types simultaneously, including even other lists.
+
+```
+# Example list with Marvel characters and attributes
+avengers_info = ["Iron Man", 3000, "Thor", "Hulk", "Black Widow", 34.5, 6]
+
+# Print the lists
+print(f"avengers list:\t {avengers_info}")
+output:
+["Iron Man", 3000, "Thor", "Hulk", "Black Widow", 34.5, 6]
+
+print(f"{type(avengers_info)}") # confirming you have created a list
+output:
+<class 'list'>
+```
+
++ **Go to session_1_task.py and create a list for your selected task**
+
+#### Access List Elements
+
+Lists are sequence types, meaning their elements are ordered and accessible via indexing. **Note** that the index for the first element is 0.
+
+That means that the index position from left to right is: [0, 1, 2, 3, 4, 5] 
+
+Conversely, indexing from right to left uses negative indexes that start from 1: [-6, -5, -4, -3, -2, -1]
+
+Negative indexes are best for when you want an element at the end of a long list.
+
+```
+avengers_info = ["Iron Man", 3000, "Thor", "Hulk", "Black Widow", 34.5, 6]
+
+# Access the first element of the avengers list
+print(avengers_info[0])  
+# Output: Iron Man
+```
+
+#### Slicing a List
+
+If you need to return more than one element, slicing a list can help. Just specify the start and end index separated by a colon (:). **Note**: the end index is excluded from the output.
+
+```
+avengers_info = ["Iron Man", 3000, "Thor", "Hulk", "Black Widow", 34.5, 6]
+
+# Slicing the avengers list
+print(f"idx 1:3-> {avengers_info[1:3]}")  # Output: [3000, 'Thor']
+
+# if you leave either a start index, end index or both indexes blank, it will slice from the start, up to the end or from the complete start to end of the list
+# slice last 2 elements
+print(f"Last 2 elements: {avengers_info[-2:]}")  # Output: [34.5, 6]
+
+# slice first 2 elements
+print(f"First 2 elements: {avengers_info[:2]}")  # Output: ["Iron Man", 3000]
+
+# slice the whole list
+print(f"All the elements: {avengers_info[:]}")  # Output: ["Iron Man", 3000, "Thor", "Hulk", "Black Widow", 34.5, 6]
+```
+
+#### Modify a List
+
+Lists are mutable, meaning you can change their elements using list methods or by overwriting the element at a specific index.
+
+```
+avengers_info = ["Iron Man", 3000, "Thor", "Hulk", "Black Widow", 34.5, 6]
+
+# Overwrite an element
+avengers_info[2] = "Captain America"
+
+print(avengers_info)  # Output: ["Iron Man", 3000, "Captain America", "Hulk", "Black Widow", 34.5, 6]
+
+```
+
+#### Changing the Size of a List
+
+You can also change the size of a list using list methods like `append()`, `pop()`, and `extend()`.
+
+```
+avengers_info = ["Iron Man", 3000, "Thor", "Hulk", "Black Widow", 34.5, 6]
+
+# Grow the avengers list with append()
+avengers_info.append("Hawkeye")
+
+print(avengers_info)  # Output: ["Iron Man", 3000, "Captain America", "Hulk", "Black Widow", 34.5, 6, “Hawkeye”]
+```
+
+```
+avengers_info = ["Iron Man", 3000, "Thor", "Hulk", "Black Widow", 34.5, 6]
+
+# Remove an element with pop()
+avengers_info.pop(1)
+
+print(avengers_info)  # Output: ["Iron Man", "Captain America", "Hulk", "Black Widow", 34.5, 6, “Hawkeye”]
+```
+
+```
+avengers_info = ["Iron Man", 3000, "Thor", "Hulk", "Black Widow", 34.5, 6]
+
+additional_heroes = ["Ant-Man", "Wasp", "Doctor Strange"]
+
+# Extend the list
+avengers_info.extend(additional_heroes)
+
+print(avengers_info)  # Output: ["Iron Man", "Captain America", "Hulk", "Black Widow", 34.5, 6, "Hawkeye", "Ant-Man", "Wasp", "Doctor Strange"]
+```
+
+So there you have it! We've explored the basics of lists in Python using our Marvel heroes example. There's much more to discover about lists, including advanced methods and operations. 
+
+For further reading, have a look at the links under **Resources** 
+
+
+
+### The Dictionary
 
 ### Resources
 1. [PEP 8](https://peps.python.org/pep-0008/#introduction) style guide
+1. [Data Structures](https://docs.python.org/3.11/tutorial/datastructures.html#data-structures)
+1. [List documentation](https://docs.python.org/3.11/tutorial/introduction.html#lists)
+1. [List methods](https://docs.python.org/3.11/tutorial/datastructures.html#more-on-lists)
+1. [w3schools- List](https://www.w3schools.com/python/python_lists.asp)

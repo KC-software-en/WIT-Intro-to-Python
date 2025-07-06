@@ -146,18 +146,14 @@ E.g.
 
 ```
 num_of_students = 56
-print(type(num_of_students)) 
-output:
-<class 'int'>
+print(type(num_of_students))  # output: <class 'int'>
 ```
 
 E.g. 
 
 ```
 num_of_students = "56"
-print(type(num_of_students)) 
-output:
-<class 'str'>
+print(type(num_of_students))  # output: <class 'str'>
 ```
 
 _Take note of the above example._ You may find yourself with an error because the data type used through out your algorithm cannot perform certain actions. For example, you cannot perform mathematical operations on a number stored as a string. 
@@ -174,9 +170,7 @@ E.g.
 ```
 num_of_students = "56"
 int(num_of_students)
-print(type(num_of_students)) 
-output:
-<class 'int'>
+print(type(num_of_students)) # output: <class 'int'>
 ```
 
 The above conversion will allow for addition operations, for example:
@@ -185,8 +179,7 @@ The above conversion will allow for addition operations, for example:
 invited_guests = 29
 plus_1_guests = "13"
 total_guests = invited_guests + int(plus_1_guests)
-output:
-42
+print(total_guests) # output: 42
 ```
 
 
@@ -289,14 +282,10 @@ E.g.
 
 ```
 breed = "tabbie"
-print(breed)
-output:
-tabbie
+print(breed)  # output: tabbie
 
 breed = "ragdoll"
-print(breed)
-output:
-ragdoll
+print(breed)  # output: ragdoll
 ```
 
 Python will always use the lastest value saved in a variable - bear in mind that the code runs line by line from top to bottom.
@@ -344,13 +333,10 @@ You can create a list by naming an object and entering your values within square
 avengers_info = ["Iron Man", 3000, "Thor", "Hulk", "Black Widow", 34.5, 6]
 
 # Print the lists
-print(f"avengers list:\t {avengers_info}")
-output:
-["Iron Man", 3000, "Thor", "Hulk", "Black Widow", 34.5, 6]
+print(f"avengers list:\t {avengers_info}") # output: ["Iron Man", 3000, "Thor", "Hulk", "Black Widow", 34.5, 6]
 
-print(f"{type(avengers_info)}") # confirming you have created a list
-output:
-<class 'list'>
+# confirm you have created a list
+print(f"{type(avengers_info)}")  # output: <class 'list'>
 ```
 
 + **Go to session_1_task.py and create a list for your selected task**
@@ -449,9 +435,150 @@ For further reading, have a look at the links under **Resources**
 
 ### The Dictionary
 
+A dictionary can be used to store data. Each item in a dictionary has a key and a value. Whereas an index can access a value in a list, a dictionary key accesses its value.
+
+#### When to use a Dictionary?
+
+Dictionaries are a great choice when you want an unordered collection of items (i.e. the order in which data enters is not preserved). Here are a few examples where you may find dictionaries particularly useful:
+
+1. A quick lookup of data via key access (i.e. it takes the same amount of time regardless of the data set size, O(1))
+1. You want named attributes 
+1. You need to add or update data
+1. You work with JSON or APIs
+
+#### Create a Dictionary
+
+Now let's see how you can create a dictionary.
+Your checklist:
++ Use curly brackets {} to encompass the data.
++ Assign a key-value pair, seperated by a colon(:).
++ Seperate the items by a comma.
++ Items can use any data type, however, the key must be immutable (i.e. not a list or dictionary capable of changing).
++ The key must be **unique**.
+
+E.g.
+```
+pet_breed = {
+    "Snowball": "Ragdoll",
+    "Beethoven": "Saint Bernard",
+}
+```
+
+Alternatively, if you already have a data set in a list, use the dictionary method [dict()] to cast it to a dictionary.
+
+E.g.
+```
+pet_breed = dict([
+    ["Snowball", "Ragdoll"],
+    ["Beethoven", "Saint Bernard"]
+    ])
+```
+
+#### Access Dictionary Elements
+
+There are a few ways to retrieve a value:
++ Place the key inside of the square brackets:
+    ```
+    pet_breed = {
+        "Snowball": "Ragdoll",
+        "Beethoven": "Saint Bernard",
+    }
+
+    print(pet_breed["Snowball"]) # output: "Ragdoll"
+    ```
+
++ Use the get() method:
+    ```
+    pet_breed = {
+        "Snowball": "Ragdoll",
+        "Beethoven": "Saint Bernard",
+    }
+    
+    print(pet_breed.get("Snowball")) # output: "Ragdoll"
+    ```
+
+You could also retrieve all the keys or values in a dictionary with their respective methods.
+
+E.g.
+```
+pet_breed = {
+    "Snowball": "Ragdoll",
+    "Beethoven": "Saint Bernard",
+}
+keys = pet_breed.keys() # use the key method on the dictionary
+
+print(keys) # output: dict_keys(["Snowball", "Beethoven"])
+```
+
+E.g.
+```
+pet_breed = {
+    "Snowball": "Ragdoll",
+    "Beethoven": "Saint Bernard",
+}
+
+values = pet_breed.values() # use the value method on the dictionary
+
+print(values)  # output: dict_values(["Ragdoll", "Saint Bernard"])
+```
+
+#### Modify a Dictionary
+
+Simply use the assignment operator '=' to update a dictionary item. Similary, you can add a new dictionary item with the same step.
+
+E.g.
+```
+pet_breed = {
+    "Snowball": "Ragdoll",
+    "Beethoven": "Saint Bernard",
+}
+
+# index the dict key and assign new value
+pet_breed["Snowball"] = "Tabbie" 
+
+print(pet_breed) # output: {"Snowball": "Tabbie", "Beethoven": "Saint Bernard",}
+
+```
+
+E.g.
+```
+pet_breed = {
+    "Snowball": "Ragdoll",
+    "Beethoven": "Saint Bernard",
+}
+
+# add a new dict item
+pet_breed["Chompers"] = "Dalmatian"
+
+print(pet_breed) # output: {"Snowball": "Tabbie", "Beethoven": "Saint Bernard", "Chompers": "Dalmatian"}
+```
+
+#### Use a Boolean to Check for a Dictionary Key
+
+Use the 'in' keyword to check for a dictionary key.
+
+```
+pet_breed = {
+    "Snowball": "Ragdoll",
+    "Beethoven": "Saint Bernard",
+}
+
+print("Beethoven" in pet_breed)  # output: True
+```
+
+_**This membership test is only for keys.**_
+
+## Mentimeter Quiz Time!
+
+Let's check your learnings:
+
+**Join at menti.com** | Use vote code 6651 9433
+
 ### Resources
 1. [PEP 8](https://peps.python.org/pep-0008/#introduction) style guide
+1. [String Methods](https://docs.python.org/3.11/library/stdtypes.html#string-methods)
 1. [Data Structures](https://docs.python.org/3.11/tutorial/datastructures.html#data-structures)
 1. [List documentation](https://docs.python.org/3.11/tutorial/introduction.html#lists)
 1. [List methods](https://docs.python.org/3.11/tutorial/datastructures.html#more-on-lists)
 1. [w3schools- List](https://www.w3schools.com/python/python_lists.asp)
+1. [Dictionary documentation](https://docs.python.org/3.11/tutorial/datastructures.html#dictionaries)

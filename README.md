@@ -169,8 +169,8 @@ An argument is the value that the casting commands will use to act. Simply place
 E.g.
 ```
 num_of_students = "56"
-int(num_of_students)
-print(type(num_of_students)) # output: <class 'int'>
+convert_num_of_students = int(num_of_students)
+print(type(convert_num_of_students)) # output: <class 'int'>
 ```
 
 The above conversion will allow for addition operations, for example:
@@ -240,7 +240,7 @@ E.g.
 
 `breed = input("What is the breed of your cat?: ")`
 
-Notice the variable name "breed", the input function and the argument placed within the brackets. An argument is the value that the print command will use to act.
+Notice the variable name "breed", the input function and the argument placed within the brackets. An argument is the value that the input command will use to act.
 
 The information a user inputs automatically stores as a string data type (i.e. a list of characters). Moreover, you can also cast the string variable type that was entered via input(), so that you can use it later in the program's code. See the examples below:
 

@@ -582,3 +582,297 @@ Let's check your learnings:
 1. [List methods](https://docs.python.org/3.11/tutorial/datastructures.html#more-on-lists)
 1. [w3schools- List](https://www.w3schools.com/python/python_lists.asp)
 1. [Dictionary documentation](https://docs.python.org/3.11/tutorial/datastructures.html#dictionaries)
+
+# Making Python Think – Logic & Flow
+
+##  Control Stuctures (if, elif, else) – teaching code how to make decisions
+
+I am going to start off today's session by introducing conditional statements. A computer will make the decision to run specific blocks of code depending on if-statements. 
+
+### If
+
+The if-statements will compare variables and complete an action based on the outcome.
+
+An important note is the structure of the code under a conditional statement. An error raises if there are missing or misplaced indents. In Python use the tab button (equivalent to four spaces) to indent the code under an if-statement.
+
+E.g.
+```
+people = 23
+
+if people < 30:
+    print("The guest list has not filled up yet.")
+```
+
+The print statement will only display if the condition is True (referencing the boolean data type).
+
+Notice the syntax of a conditional statement:
+1. Start with the 'if' keyword
+1. A comparison operator
+1. End the conditional statement with a colon (:)
+1. The indented code indicates the path the computer will take if the condition evaluates to True
+1. _Extra:_ if you have a particularly long statement, you can place the condition in brackets for better readability. E.g. `if (people < 30):`
+
+### Comparison operators 
+
+The comparison operators used in conditionals include:
+1. < less than
+1. `>` greater than
+1. == equal to
+1. ! not
+1. <= less than or equal to
+1. `>=` greater than or equal to
+1. != not equal to
+
+The if-statement will check if a condition outcome is True or False. For example, if a new password is valid.
+
+Let's have a look at assigning booleans to variables in a control structure.
+
+E.g.
+```
+pet = "Play inside."
+
+sunny = False
+
+if sunny: # this is shorthand for if sunny == True (redundant to write out as the default is True)
+    pet = "Go for a walk."
+```
+
+### Else
+
+An else-statement takes the computer along a path to follow when an if-statement evaluates to False. This the 'else' keyword presents an alternative route. Simply use the word 'else' to create the conditional statement.
+
+E.g.
+```
+if condition:
+    indented code
+
+else:
+    indented code
+```
+
+Notice the syntax of an 'else' conditional statement:
+1. Else is always after the if-statement.
+1. Only use the keyword 'else.'
+1. End the conditional statement with a colon (:).
+1. The indented code indicates the path the computer will take if the condition evaluates to False.
+
+E.g.
+```
+date = 41
+
+# check if the date falls within the July month
+if 1 < date < 31:
+    print("Accepted")
+
+else:
+    print("Invalid date") # skips if-statement & executes else-statement output
+```
+
+The else-statement will give us some feedback instead of a blank terminal.
+
+### Elif
+
+The last conditional statement is one we use when you want to check for multiple conditions. Elif is the shortened form of else-if. There can only be one if-statement and else-statement but many elif-statements. 
+
+E.g.
+```
+date = 41
+
+# check if the date falls within the July month
+if 1 <= date <= 31:
+    print("Accepted")
+
+elif date > 31:
+    print("The date input is too high")
+
+elif date < 1:
+    print("That date input is too low")
+
+else:
+    print("Invalid date") # skips if-statement & executes else-statement output
+```
+
+The computer evaluates each condition to see if it's True and only checks the next condition if it's False. **_Note_** the order of the control structure:
+1. if
+1. elif
+1. else
+
+## Performing math operations within conditionals
+
+### Mathematical Operations
+
+As you may recall from the first session, Python automatically picks up the number data type you save to a variable name. Futhermore, mathematical operations with different values have to be of the same data type to run successfully. This is where casting becomes a necessity.
+
+Performing calculations in Python is similar to the methods used in normal math.
+
+E.g.
+```
+# add integers
+total = 3 + 4
+
+print(total) # output: 7
+```
+
+E.g.
+```
+# add floats
+cost = 3.5 + 2.1
+
+print(cost) # output: 5.6
+```
+
+E.g.
+```
+# deduct int
+total = 3 - 4
+
+print(total) # output: -1
+```
+
+E.g.
+```
+# calculate the product of int
+total = 3 * 4
+
+print(total) # output: 12
+```
+
+E.g.
+```
+# calculate the quotient of int
+total = 3 / 4
+
+print(total) # output: 0.75
+```
+
+E.g.
+```
+# find the remainder of integer division via modulus operation
+remainder = 5 % 2 # Divide the value left of the operator by the value on the right to return the remainder
+
+print(remainder) # output: 1
+```
+_**Note**: modulus can help identify even and odd numbers._
+
+E.g.
+```
+# calculate an exponential value
+result = 3 ** 2 # the exponent power is on the right
+
+print(result) # output: 9
+```
+
+**Optional Reading**: As you advance with your learning, you may be interested to learn about the math library import and how you can use it in your code.
+
+**Now let's do a calculation within a control structure!**
+
+E.g.
+```
+# add integers
+total = 3 + 4
+
+# calculate the remainder after diving by 3
+remainder = total % 3
+
+if remainder < 1:
+    print("That's not much")
+
+elif 1 <= remainder >= 3  
+    print("Ok not bad")
+
+else:
+    print("Oof that's a bit much")
+
+```
+
+## Loops (for, while) – automating repetitive tasks
+
+### while loop
+
+First we will look at while loops. Within a while loop, a block of code repeats until a condition becomes False. That is to say an action repeats while a condition is True. The syntax starts with the while keyword followed by a Boolean statement. End the line with a colon and start the repeatable code on the next line, after an indent. Remember: Python is syntax specific - you will get an error if a tab (equivalent to 4 spaces) is not there. A while statement is tested at the start before repeating the actionable code.
+
+```
+while boolean expression:
+    statement(s)
+```
+
+E.g.
+```
+people = 10
+
+while people > 1:
+    people = people - 1 # alternative shorthand: people -= 1
+    print(people)
+```
+
+The while loop will ensure one deducts from people until there are 2 people. The latest value for people is stored in memory until the value is overwritten in the next while loop iteration.
+
+Note: It is important to ensure a loop reaches a False condition or you risk running into an infinite loop. The loops exits one a condition is False.
+
+### for loop
+
+Next we have the for loop. A for loop, similar to a while loop, also repeats code until a condition is False. However, the number of repetitions are known ahead of time. The for loop has a start value which counts up to the end value.
+
+Note the syntax. The keywords Python picks are 'for' and 'in.' The for statement ends with a colon and the repeatable actions follows indented on the next line.
+```
+for index_variable in sequence: 
+    statements 
+```
+
+Lets use Python's built-in range function to set a start and end point for the repeatable code.
+
+E.g.
+```
+for i in range(2, 10):
+    print(i)
+```
+
+In Python you can use a placeholder name to refer to each value the for loop statement will test for True. People often use 'i' or 'j'.
+
+## Combining logic with lists and dictionaries
+
+You can also iterate over items in a list.
+E.g.
+```
+avengers_info = ["Iron Man", 3000, "Thor", "Hulk", "Black Widow", 34.5, 6]
+
+for info in avengers_info:
+    print(info)
+```
+
+Lets have a look at looping through a dictionary. You can use the built-in items() method to iterate over a key-value pair (i.e. item) in a dictionary. Note the syntax includes the dictionary name followed by the dictionary items method (i.e. function). You leave the brackets empty.
+E.g.
+```
+pet_breed = {
+    "Snowball": "Ragdoll",
+    "Beethoven": "Saint Bernard",
+}
+
+for key, value in pet_breed.items():
+    print(key, value)
+```
+
+## Mentimeter Quiz Time!
+
+Let's check your learnings:
+
+Join at **menti.com** | Use vote code 6151 8820 
+
+Or 
+
+https://www.menti.com/algw3xnxcvyn
+
+### Resources
+1. [Conditional statements](https://www.geeksforgeeks.org/python/python-if-else/)
+
+1. [Math Module](https://docs.python.org/3.11/library/math.html#module-math) for further reading
+
+1. [Built-in Python functions](https://docs.python.org/3.11/library/functions.html)
+
+1. [Range function](https://docs.python.org/3.11/library/functions.html#func-range)
+
+1. [While statement](https://www.geeksforgeeks.org/python/python-while-loop/)
+
+1. [For statement](https://docs.python.org/3.11/tutorial/controlflow.html#for-statements)
+
+1. [Loop over a dictionary](https://docs.python.org/3/tutorial/datastructures.html#looping-techniques)

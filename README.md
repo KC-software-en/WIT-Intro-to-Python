@@ -940,7 +940,7 @@ print(pet_breed_length) # output 7
 
 You can check if a character is present in a string using the 'in' keyword. It returns True if the character is found, otherwise False.
 
-Check for an uppercase letter:
+**Check for an uppercase letter:**
 
 E.g.
 ```
@@ -954,21 +954,7 @@ uppercase_check = pet_breed.isupper() # method returns True or False
 print(uppercase_check) # output True
 ```
 
-Check for an lowercase letter:
-
-E.g.
-```
-# set a char to check for a lowercase letter
-pet_breed = "R"
-
-# use the method to check for an lowercase letter
-lowercase_check = pet_breed.islower() # method returns True or False
-
-# print out the boolean check
-print(lowercase_check) # output False
-```
-
-Check for a number:
+**Check for a number:**
 
 E.g.
 ```
@@ -982,7 +968,7 @@ number_check = number.isdigit() # method returns True or False
 print(number_check) # output True
 ```
 
-Check for alphanumeric characters (i.e. letters and numbers).
+**Check for alphanumeric characters (i.e. letters and numbers).**
 
 E.g.
 ```
@@ -992,7 +978,7 @@ band_name = "4ll4mericanRejects"
 alphanumeric_check = band_name.isalnum() # method returns True or False
 
 # print out the boolean check
-print(alphanumeric_check) # output False
+print(alphanumeric_check) # output True
 ```
 
 ## More on conditional statements
@@ -1007,21 +993,37 @@ You can combine multiple conditions in a single if-statement using logical opera
 
 E.g.
 ```
+# set the variables for pet type, breed and colour
 pet_type = "Dog"
 pet_breed = "Saint Bernard"
+pet_colour = "Brown"
 
-# check for a pet type and pet breed
-# print out the pet type and pet breed
-# print out and error response for an unknown pet type and pet breed
-if pet_type == "Dog" and pet_breed == "Saint Bernard":
-    print("You have a Saint Bernard dog!")
+# meet all 3 requirements
+if pet_type == "Dog" and pet_breed == "Saint Bernard" and pet_colour == "Brown":
+    print("You have a brown Saint Bernard dog!")
 
-elif pet_type == "Cat" or pet_breed == "Ragdoll":
-    print("You have a cat or a Ragdoll breed!")
+# meet 2 requirements
+elif (pet_type == "Dog" and pet_breed == "Saint Bernard") or (pet_type == "Dog" and pet_colour == "Brown") or (pet_breed == "Saint Bernard" and pet_colour == "Brown"):
+    print("Your pet matches two characteristics!")
 
+# meet 1 requirement or none
 else:
-    print("Unknown pet type or breed.")
+    print("Your pet matches one or none of the characteristics.")
+```
 
+## More on loops
+
+Similar to how we iterated over a list, the same can be done to loop over the characters in a string. The following program will output each character in the string on a new line. 
+
+E.g.
+```
+# set a variable for the pet_breed
+pet_breed = "Ragdoll"
+
+# iterate over the pet_breed
+# print out each character
+for char in pet_breed:
+    print(char)
 ```
 
 ## Project time

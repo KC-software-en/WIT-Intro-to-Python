@@ -5,7 +5,7 @@ Task requirements:
 1. Define a function called password_strength.
 2. Ask the user to input a password.
 3 Check for:
-3.1	Length (>= 8 characters)
+3.1	Length (== 8 characters)
 3.2	Presence of a number
 3.3	Presence of an uppercase letter
 4.	Give feedback like “Weak”, “Medium”, or “Strong”.

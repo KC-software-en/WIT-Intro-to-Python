@@ -876,3 +876,157 @@ https://www.menti.com/algw3xnxcvyn
 1. [For statement](https://docs.python.org/3.11/tutorial/controlflow.html#for-statements)
 
 1. [Loop over a dictionary](https://docs.python.org/3/tutorial/datastructures.html#looping-techniques)
+
+# Learning consolidation – Project
+
+For our final session, we are going to build a mini-project that brings together everything from Sessions 1 and 2. The goal is to reinforce the understanding of:
+
++	Data types (str, int, float, bool)
++	Collections (list, dict)
++	Logic & flow (if, else, for, while)
++	Real-world problem-solving with code
+
+I will provide a project brief and you will have the opportunity to work on it in your codespace. You can ask questions in the comments, and I will assist you as needed.
+
+## Define a function
+
+A function is a block of reusable code that performs a specific task. Functions help us avoid repetition and make our code more organised.
+
+The syntax for defining a function in Python is:
+```
+def function_name():
+    coding logic  
+```
+The 'def' keyword indicates that we are defining a function. The function name follows, and it is followed by parentheses. The indented code block contains the logic that the function will execute when called.
+
+Now remember that in a Python program, the computer will read your code but not execute it unless you call the function. You can call the function by using its name followed by parentheses.
+
+```
+# define a function
+def function_name():
+    coding logic  
+
+# call the function
+function_name()
+```
+
+*Lets look at an example program*
+```
+def greeting():
+    print("Hello, world!")
+
+greeting()
+```
+
+The program defines a function called 'greeting' and prints "Hello, world!" when called. Then the function was called and the output was displayed.
+
+## More on built-in functions
+
+We have previously looked at built-in functions such as input(), print() and range(). Now I am going to introduce you to some string methods. 
+
+### Check length
+You can check the length of a string using the built-in len() function. It returns the number of characters in the string.
+
+E.g.
+```
+pet_breed = "Ragdoll"
+
+pet_breed_length = len(pet_breed)
+
+print(pet_breed_length) # output 7
+```
+
+### Check a Character
+
+You can check if a character is present in a string using the 'in' keyword. It returns True if the character is found, otherwise False.
+
+Check for an uppercase letter:
+
+E.g.
+```
+# set a char to check for an uppercase letter
+pet_breed = "R"
+
+# use the method to check for an uppercase letter
+uppercase_check = pet_breed.isupper() # method returns True or False
+
+# print out the boolean check
+print(uppercase_check) # output True
+```
+
+Check for an lowercase letter:
+
+E.g.
+```
+# set a char to check for a lowercase letter
+pet_breed = "R"
+
+# use the method to check for an lowercase letter
+lowercase_check = pet_breed.islower() # method returns True or False
+
+# print out the boolean check
+print(lowercase_check) # output False
+```
+
+Check for a number:
+
+E.g.
+```
+# set a char to check for a number
+number = "3"
+
+# use the method to check for a number
+number_check = number.isdigit() # method returns True or False
+
+# print out the boolean check
+print(number_check) # output True
+```
+
+Check for alphanumeric characters (i.e. letters and numbers).
+
+E.g.
+```
+band_name = "4ll4mericanRejects"
+
+# use alphanumeric method to check that an objects contains both letters and numbers.
+alphanumeric_check = band_name.isalnum() # method returns True or False
+
+# print out the boolean check
+print(alphanumeric_check) # output False
+```
+
+## More on conditional statements
+
+**Check for multiple conditions in a single if-statement**
+
+You can combine multiple conditions in a single if-statement using logical operators. The logical operators include:
+
+1. and - True if both conditions are True
+1. or - True if at least one condition is True
+1. not - True if the condition is False
+
+E.g.
+```
+pet_type = "Dog"
+pet_breed = "Saint Bernard"
+
+# check for a pet type and pet breed
+# print out the pet type and pet breed
+# print out and error response for an unknown pet type and pet breed
+if pet_type == "Dog" and pet_breed == "Saint Bernard":
+    print("You have a Saint Bernard dog!")
+
+elif pet_type == "Cat" or pet_breed == "Ragdoll":
+    print("You have a cat or a Ragdoll breed!")
+
+else:
+    print("Unknown pet type or breed.")
+
+```
+
+## Project time
+
+Now is your opportunity to attempt the session 3 project! Open the Learning consolidation folder and remember to run your program to test it. Feel free to ask questions!
+
+### Resources
+[Built-in Types](https://docs.python.org/3.11/library/stdtypes.html#built-in-types)
